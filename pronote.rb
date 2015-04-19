@@ -8,4 +8,7 @@ def pronote
     load 'pronote_eleve.rb'
   else
     puts "Statut inexistant"
+  end
+end
+pronote
 
