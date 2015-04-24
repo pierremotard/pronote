@@ -3,9 +3,13 @@ def demander_note_eleve(notation)
   nom = gets.chomp
   print "Note : "
   note = gets.chomp.to_i
-  if note > 20
-    while note > 20
-      puts "La note ne peut pas être superieure à 20 !"
+  if note > 20 or note < 0
+    while note > 20 or note < 0
+      if note > 20
+        puts "La note ne peut pas être superieure à 20 !"
+      else note < 0
+        puts "La note ne peut pas être inferieure à 0 !"
+      end
       print "Note : "
       note = gets.chomp.to_i
       notation[nom] = note
