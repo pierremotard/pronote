@@ -1,6 +1,6 @@
 def pronote
   puts "Bienvenue sur le logiciel Pronote !"
-  print "Professeur ou eleve ?"
+  print "Professeur ou eleve :  "
   statut = gets.chomp
   if statut == "professeur"
     load 'pronote_professeur.rb'
