@@ -1,8 +1,8 @@
-def demander_note_eleve(notation)
+def mettre_note_eleve(notation)
   print "Nom : "
   nom = gets.chomp
   print "Note : "
-  note = gets.chomp.to_i
+  note = gets.chomp.to_f
   if note > 20 or note < 0
     while note > 20 or note < 0
       if note > 20
@@ -11,7 +11,7 @@ def demander_note_eleve(notation)
         puts "La note ne peut pas être inferieure à 0 !"
       end
       print "Note : "
-      note = gets.chomp.to_i
+      note = gets.chomp.to_f
       notation[nom] = note
      end
   else
@@ -34,7 +34,7 @@ def pronote_professeur
 
   notation = {}
   nombre_eleve.times{
-    demander_note_eleve(notation)
+    mettre_note_eleve(notation)
   }
 
   notation.each do |nom, note|
