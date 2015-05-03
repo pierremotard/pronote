@@ -6,9 +6,17 @@ def mettre_note_eleve(notation)
   if note > 20 or note < 0
     while note > 20 or note < 0
       if note > 20
-        puts "La note ne peut pas être superieure à 20 !"
+        begin
+          raise ArgumentError.new("La note ne peut pas être superieure à 20 !")
+        rescue
+          puts "La note ne peut pas être superieure à 20"
+        end
       else note < 0
-        puts "La note ne peut pas être inferieure à 0 !"
+        begin
+          raise ArgumentError.new("La note ne peut pas être inférieure à 0 !")
+        rescue
+          puts "La note ne peut pas être inférieure à 0."
+        end
       end
       print "Note : "
       note = gets.chomp.to_f
