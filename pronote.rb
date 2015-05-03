@@ -2,9 +2,10 @@ def pronote
   puts "Bienvenue sur le logiciel Pronote !"
   print "Professeur ou eleve :  "
   statut = gets.chomp
-  if statut == "professeur"
+  case statut
+  when "professeur"
     load 'pronote_professeur.rb'
-  elsif statut == "eleve"
+  when "eleve"
     load 'pronote_eleve.rb'
   else
     puts "Statut inexistant"
